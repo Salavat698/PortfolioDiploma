@@ -18,7 +18,7 @@ function Header(props) {
     <>
       <header className={styles.header}>
         <nav>
-          <div className={classnames(styles.burger_btn)} onClick={() => setMenuActive(!menuActive)}>
+          <div className={menuActive ? classnames(styles.burger_btn, styles.active_btn) : classnames(styles.burger_btn)} onClick={() => setMenuActive(!menuActive)}>
             <span/>
           </div>
           <Menu active={menuActive} setActive={setMenuActive} OnIndex={isOnIndex}/>
